@@ -20,6 +20,6 @@ def post_detail(request, id):
 
     return render(
         request,
-        'blog/post/list.html',
+        'blog/post/detail.html',
         {'post': post}
     )
