@@ -54,6 +54,7 @@ label {
   color: #333;
   margin-bottom: 4px;
 }
+
 input,
 textarea {
   clear: both;
@@ -64,6 +65,7 @@ textarea {
   padding: 6px 10px;
   font-size: 12px;
 }
+
 input[type="submit"] {
   font-weight: bold;
   background: #00abff;
@@ -72,6 +74,7 @@ input[type="submit"] {
   font-size: 14px;
   text-transform: uppercase;
 }
+
 .errorlist {
   color: #cc0033;
   float: left;
@@ -83,9 +86,11 @@ input[type="submit"] {
 .comment {
   padding: 10px;
 }
+
 .comment:nth-child(even) {
   background: #efefef;
 }
+
 .comment .info {
   font-weight: bold;
   font-size: 12px;
