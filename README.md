@@ -1,2 +1,2 @@
 # blog-application
-### A project built by reading Django 4 By Example
+### A project built using the example code from Django 4 By Example.
