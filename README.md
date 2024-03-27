@@ -3,12 +3,12 @@
 ### This project was built by following the example code in the book *Django 4 By Example*.
 
 ## Installation
-Prerequisites
-Python (version x.x.x)
-pip (included with Python)
-virtualenv (recommended)
+### Prerequisites
+* Python (version x.x.x)
+* pip (included with Python)
+* virtualenv (recommended)
 
-## Steps
+### Steps
 Clone the repository:
 git clone https://github.com/yourusername/yourproject.git
 
@@ -18,7 +18,7 @@ cd yourproject
 Create and activate a virtual environment (recommended):
 python -m venv venv
 source venv/bin/activate      # On Linux/macOS
-# OR
+#### OR
 venv\Scripts\activate         # On Windows
 
 Install dependencies:
