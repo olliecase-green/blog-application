@@ -6,7 +6,8 @@ from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
 from django.db.models import Count
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from django.contrib.postgres.search import TrigramSimilarity
 
 
 def post_list(request, tag_slug=None):
@@ -149,16 +150,17 @@ def post_search(request):
             results = (
                 Post
                 .published
-                .annotate(search=SearchVector('title', 'body'))
-                .filter(search=query)
+                .annotate(similarity=TrigramSimilarity('title', query))
+                .filter(similarity__gt=0.1)
+                .order_by('-similarity')
             )
 
-        return render(
-            request,
-            'blog/post/search.html',
-            {
-                'form': form,
-                'query': query,
-                'results': results
-            }
-        )
+    return render(
+        request,
+        'blog/post/search.html',
+        {
+            'form': form,
+            'query': query,
+            'results': results
+        }
+    )
