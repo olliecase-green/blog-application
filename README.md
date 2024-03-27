@@ -9,22 +9,23 @@
 
 ### Steps
 1. Clone the repository:
-`git clone https://github.com/yourusername/yourproject.git`
+`git clone https://github.com/olliecase-green/blog-application.git`
 
-2. Navigate to the project directory:
-`cd yourproject`
+3. Navigate to the project directory:
+`cd blog-application`
 
-3. Install dependencies:
+4. Install dependencies:
 `pip install -r requirements.txt`
 
-4. Run migrations:
+5. Run migrations:
 `python manage.py migrate`
 
-5. Create a superuser (if needed):
+6. Create a superuser:
 `python manage.py createsuperuser`
 
-6. Run the development server:
+7. Run the development server:
 `python manage.py runserver`
 
-7. Access the application:
-Open a web browser and go to http://localhost:8000/
+8. Login to the admin portal at http://localhost:8000/admin and add some blog posts
+
+9. Once added, access the application in a web browser at http://localhost:8000/blog
